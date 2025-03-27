@@ -21,6 +21,10 @@ header .container{
     margin-bottom: 56px;
 }
 
+.noticia a{
+    text-decoration: none;
+}
+
 .destaque .noticia a{
     display: flex;
     font-size: 1.3em;
@@ -43,8 +47,10 @@ h3 {
 
 .destaque h2{
     color: rgb(71, 71, 71);
-    margin-top: 20px;
-    margin-left: 16em;
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza os itens no eixo transversal */
+    text-decoration: none; /* Remove sublinhado do link */
 }
 
 h2{
@@ -254,7 +260,26 @@ aside .produto {
         flex-direction: column;
     }
 
+    .noticia a {
+        display: flex;
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center; /* Centraliza os itens no eixo transversal */
+        text-decoration: none; /* Remove sublinhado do link */
+        color: inherit; /* Mantém a cor padrão do texto */
+    }
     
+    .noticia img {
+        width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+        max-width: 300px; /* Define um tamanho máximo para evitar imagens grandes demais */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    
+    .noticia h3 {
+        text-align: center; /* Centraliza o texto */
+        margin-top: 10px; /* Espaço entre a imagem e o texto */
+        font-size: 1.2em; /* Ajusta o tamanho da fonte */
+    }
+
     .submenu {
         display: block;
         width: 100%;
@@ -291,6 +316,26 @@ aside .produto {
         max-width: 90%;
     }
     
+    .noticia a {
+        display: flex;
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center; /* Centraliza os itens no eixo transversal */
+        text-decoration: none; /* Remove sublinhado do link */
+        color: inherit; /* Mantém a cor padrão do texto */
+    }
+    
+    .noticia img {
+        width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+        max-width: 300px; /* Define um tamanho máximo para evitar imagens grandes demais */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    
+    .noticia h3 {
+        text-align: center; /* Centraliza o texto */
+        margin-top: 10px; /* Espaço entre a imagem e o texto */
+        font-size: 1.2em; /* Ajusta o tamanho da fonte */
+    }
+
     .button-menu{
         display: none;
     }
@@ -300,7 +345,7 @@ aside .produto {
     }
 
     .jogos{
-        grid-template-columns: repeat(3,30%);
+        grid-template-columns: repeat(2,48%);
         column-gap: 1%;
         row-gap: 5%;
         align-content: start;
@@ -314,6 +359,10 @@ aside .produto {
         font-size: 12px;
         cursor: pointer;
         border-radius: 5px;
+    }
+
+    section .destaque{
+        display: block;
     }
 }
 
